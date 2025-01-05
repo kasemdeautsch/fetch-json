@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="content"></div>
+
+    <script>
+        fetch("https://ci-swapi.herokuapp1.com/api/")
+            .then(Response => Response.json())
+            .then(data => {
+                document.getElementById("content").innerText = data.films;
+            })
+
+
+
+        //console.log('kas:', data.people)
+    </script>
+
+</body>
+
+</html>
